@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -45,5 +46,19 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
+    //Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
+    //Coroutines
+    implementation("org.jetbrains.kotlinx-coroutines-android:1.6.1")
+
+    //Lifecycle
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+
+    //LiveData
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+
+    //Kapt
+    kapt("androidx.lifecycle:lifecycle-compiler:2.7.0")
 }
